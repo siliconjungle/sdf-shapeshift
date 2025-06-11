@@ -2,9 +2,10 @@
 .page{
   --bg:#0f0f10;--panel:#18181b;--border:#2a2a2e;--text:#e5e5e5;--accent:#0a84ff;
 
-  /* min-height:100dvh;   ← REMOVE */
+  min-height:100vh;
   margin:0;
   padding-top:6vh;                 /* keep a little top air */
+  padding-bottom:3vh;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -63,6 +64,17 @@
 }
 .ctrl:hover{background:#27272c}
 
-/* slider label */
-.sliderLabel{font-size:.85rem;display:flex;align-items:center;gap:.4rem}
-.sliderLabel input{cursor:pointer}
+.repoLink {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.repoLink a {
+  color: #58a6ff;      /* GitHub blue-ish */
+  text-decoration: none;
+}
+
+.repoLink a:hover {
+  text-decoration: underline;
+}

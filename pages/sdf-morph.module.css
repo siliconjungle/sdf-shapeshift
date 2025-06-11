@@ -1,0 +1,68 @@
+/* palette + base */
+.page{
+  --bg:#0f0f10;--panel:#18181b;--border:#2a2a2e;--text:#e5e5e5;--accent:#0a84ff;
+
+  /* min-height:100dvh;   ← REMOVE */
+  margin:0;
+  padding-top:6vh;                 /* keep a little top air */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  background:var(--bg);
+  color:var(--text);
+  font:16px/1.45 system-ui,sans-serif;
+}
+
+/* headings */
+.title{font-family:monospace;font-size:2.2rem;margin:0 0 .2rem;text-shadow:0 0 4px #0a84ff80}
+.tagline{margin:0 0 1.5rem;color:#9d9d9d;font-size:.9rem}
+
+/* input panel */
+.editor{
+  width:min(640px,90vw);padding:1rem;gap:1rem;
+  display:flex;align-items:flex-start;
+  background:var(--panel);border:1px solid var(--border);border-radius:10px;
+  box-sizing:border-box;
+}
+
+/* zone */
+.zoneWrap{flex:1;display:flex;flex-direction:column;gap:.4rem}
+.zone{
+  flex:1 1 0;min-height:130px;height:130px;
+  display:flex;align-items:center;justify-content:center;position:relative;
+  border:2px dashed #ccc;border-radius:8px;background:#333;color:#ddd;
+  font-size:.9rem;text-align:center;cursor:pointer;
+}
+.zoneOver{background:#444}
+.zoneInput{position:absolute;inset:0;opacity:0;cursor:pointer}
+.preview{max-width:90%;max-height:90%;object-fit:contain;pointer-events:none}
+.dim{font-size:.75rem;color:#9d9d9d;text-align:center}
+
+/* output card */
+.card{
+  margin-top:1.5rem;width:min(640px,90vw);padding:1.2rem;
+  background:var(--panel);border:1px solid var(--border);border-radius:10px;
+  box-sizing:border-box;
+}
+.canvas{
+  display:block;margin:0 auto;
+  image-rendering:pixelated;
+  max-width:100%;height:auto;
+  border:1px solid var(--border);background:#000;
+}
+
+/* controls row */
+.ctrlRow{
+  margin-top:.8rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.ctrl{
+  padding:.5rem .9rem;font-size:.85rem;
+  border:1px solid var(--border);border-radius:6px;
+  background:#202024;color:var(--text);cursor:pointer;
+}
+.ctrl:hover{background:#27272c}
+
+/* slider label */
+.sliderLabel{font-size:.85rem;display:flex;align-items:center;gap:.4rem}
+.sliderLabel input{cursor:pointer}
